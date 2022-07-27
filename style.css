@@ -1,0 +1,60 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #D86981;
+}
+
+.btn {
+    width: 150px;
+    height: 50px;
+    border: 1px solid #000C18;
+    font-family: "Lucida Console", Courier, monospace;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 0;
+    transition: 0.5s;
+}
+
+    .btn::before, .btn::after {
+        content: '';
+        position: absolute;
+        background: #D86981;
+        z-index: -1;
+        transition: 0.5s;
+    }
+
+    .btn::before {
+        height: 50px;
+        width: 130px;
+    }
+
+    .btn::after {
+        width: 150px;
+        height: 30px;
+    }
+
+    .btn:hover::before {
+        width: 0px;
+        background: #FF4500;
+    }
+
+    .btn:hover::after {
+        height: 0px;
+        background: #FF4500;
+    }
+
+    .btn:hover {
+        background: #FF4500;
+    }
